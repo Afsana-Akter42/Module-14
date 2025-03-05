@@ -1,16 +1,28 @@
 import 'package:flutter/material.dart';
-import 'myApp.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ostadassignment/HomeFragment.dart';
+import 'package:product_app/HomeFragment.dart';
 
 void main() {
-  runApp(myApp());
+  runApp(const MyApp());
 }
 
-Widget myApp() {
-  return MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
-      appBar: AppBar(title: Text("Product App")),
-      body: Center(child: Text("Hello!")),
-    ),
-  );
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return ScreenUtilInit(
+      designSize: Size(375, 812), // Set your design size
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: Homefragment(),
+        );
+      },
+    );
+  }
 }
