@@ -1,6 +1,6 @@
 {
-    "name": "product_app",
-    "short_name": "product_app",
+    "name": "task_manager_task",
+    "short_name": "task_manager_task",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
